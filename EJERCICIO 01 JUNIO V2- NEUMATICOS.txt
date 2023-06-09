@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define NUM_NEUMATICOS 4 
+
+//Funcion que simula la lectura de datos del sensor de presion de neumatico 
+
+void leerPresionNeumaticos (int*arregloPresiones)
+{
+    int i; 
+    srand (time(NULL)); //inicializa la semilla aleatoria 
+    for (i=0; i<NUM_NEUMATICOS; i++)
+    {
+        arregloPresiones[i]=rand() %50+20;
+    }
+
+
+}
+
+void evaluacionDePresion (int*arregloPresiones) 
+{
+     int tamano;
+     int PSImin, PSImax;
+     
+    printf("Ingresa el tamaño de tu automovil: 1-Pequeño: 30 a 35 PSI, 2- Mediano: 32 a 35 PSI, 3- Grande:35 a 45 PSI");
+    scanf("%d",&tamano);  
+ switch ()
+{
+    case 1: PSImin=30, PSImax=35; 
+    break; 
+    case 2: PSImin=32, PSImax=35 ; 
+    break; 
+    case 3: PSImin=35, PSImax=45; 
+    break;
+    default: printf("warming, hay error en alguna de las llantas"); 
+    break; 
+}    
+}
+
+void estadollanta (int*arregloPresiones) 
+{
+	printf("El estado de las llantas es:"); 
+     for (i=0; i<NUM_NEUMATICOS; i++)
+	printf("Neumatico %d: PSI:"); 
+}
+
+int main ()
+{
+    int presionesNeumaticos[NUM_NEUMATICOS];
+    int i; 
+    leerPresionNeumaticos(presionesNeumaticos);
+    
+    printf("PRESIONES DE LOS NEUMATICOS");
+    for (i=0; i<NUM_NEUMATICOS; i++)
+    {
+        printf("Neumatico %d: %d PSI \n", i+1, presionesNeumaticos[i]);
+    }
+
+    return 0;
+}

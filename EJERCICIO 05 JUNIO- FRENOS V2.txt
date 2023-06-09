@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX_SENSORES 5
+// Definición de estructura para el sensor de freno
+struct SensorFreno {
+    int id;
+    float presion;
+    char ubicacion[20];
+};
+
+void InicioSensorFreno (struct SensorFreno *sensores)  //funcion con arreglo
+{
+	for (int i=0; i<MAX_SENSORES; i++) 
+	{ 
+	printf("ingerese el ID del sensor %d", i+1);
+	scanf("%d", &(sensores[i].id));
+
+	printf("ingrese la presion del sensor %d:", i+1);
+	scanf("%f",  &(sensores[i].presion));
+
+	printf("ingrese la ubicacion del sensor %d:", i+1);
+	scanf("%s", sensores[i].ubicacion);
+}
+}
+ 
+
+//FUNCION PARA RECORRER Y MOSTRAR LOS DATOS DE CADA SENSOR
+
+void mostrarSensor (struct SensorFreno* sensores)
+{
+	for (int i=0; i<MAX_SENSORES; i++)
+	{
+        printf("Sensor de freno ID: %d\n", sensores[i].id);
+        printf("Presión del sensor: %.2f\n", sensores[i].presion);
+        printf("Ubicación del sensor: %s\n", sensores[i].ubicacion);
+        printf("\n");
+    }
+}
+
+void borrar (struct SensorFreno* sensores)
+{
+    for (int i=0; i<MAX_SENSORES; i++)
+    {
+    sensores[i].id=0;
+    sensores[i].presion=0.0;
+    sensores[i].ubicacion[0]="0";
+}
+}
+
+int main() { 
+    // Declaración del arreglo de sensores de freno
+    struct SensorFreno sensores[MAX_SENSORES];
+    
+  //inicializar el arreglo de sensores llamando a la funcion 
+
+	InicioSensorFreno(sensores);
+
+//mostrar los datos de casa sensor llamando a la funcion
+
+	mostrarSensor(sensores);
+	
+//salir 
+
+    borrar(sensores);
+    
+    return 0;
+}

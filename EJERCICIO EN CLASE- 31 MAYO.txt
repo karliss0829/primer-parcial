@@ -1,0 +1,26 @@
+// CREAR UNA ESTRUCTURA DE TIPO PERSONA QUE CONTENGA LOS ELEMENTO CHAR NOMBRE DE 20, INT EDAD, SEXO
+//CREAR UNA VARIABLE DE TIPO PERSONA QUE SE LLAME PERSONA1
+//CREAR FUNCION QUE SE LLAME "MODIFICAR PERSONA"
+
+#include <stdio.h>
+
+struct persona 
+{
+    char nombre [20]; 
+    int edad; 
+    int sexo; 
+    int persona1; 
+}
+
+int main() 
+{
+    struct persona persona1=(*nombre[20])
+    
+}
+
+void modificarPersona (struct persona *pPersona){
+    printf("Ingrese nombre:");
+    scanf("%s", pPersona->nombre);
+}
+    return 0;
+}

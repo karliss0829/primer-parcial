@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int Dato=5;
+    int *PtrDato;
+    
+    PtrDato=&Dato;
+    printf("valor int dato: %p \n",&Dato);
+    printf("valorint ptrdato: %p \n",&PtrDato);
+    printf("valor Ptrdato: %p \n", PtrDato);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main()
+{
+    int Dato=5;
+    int *PtrDato;
+    
+    PtrDato=&Dato;
+    printf("valor int dato: %d \n",Dato);
+    printf("valorint ptrdato: %p \n",&PtrDato);
+    printf("valor Ptrdato: %p \n", PtrDato);
+    printf ("valor dirección dato %p", &Dato);
+    return 0;
+}

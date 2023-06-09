@@ -1,0 +1,34 @@
+//EJERCICIO ESTRUCTURA
+
+#include <stdio.h>
+#include <string.h>
+//definicion de la estructura persona
+struct persona  {
+    char nombre [50]; 
+    int edad; 
+    float altura; 
+}; 
+
+int main()
+{
+    //creo una variable de tipo persona llamada persona1
+    struct persona persona1[5]; 
+    float Nombre, altura;
+    int edad;
+    //modifica los elementos de la estructura 
+    persona1.nombre=nombre; 
+    persona1.edad=edad;
+    persona1.altura=altura;
+     
+    
+    //imprimir los datos de las personas
+    
+    printf("Nombre: \n", Nombre);
+    scanf("%e \n", &persona1.nombre); 
+    printf("Edad: \n", edad);
+    scanf("%d \n", &persona1.edad);
+    printf("Altura: %2f \n", altura); 
+    scanf("%2f \n", &persona1.altura);
+ 
+    return 0;
+}

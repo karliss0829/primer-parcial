@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define TEMPERATURA 12
+
+
+void leerTemperatura (float*arrayTemperatura)
+{
+    int t;
+    float num_temperatura;
+    float max=38.0;
+    float min=36.0;
+    srand(time (NULL)); 
+    for (t=0; t<TEMPERATURA; t++) 
+    {
+        float arrayTemperatura<12[t]=rand()/rand_max*(max-min)+num_temperatura; 
+    }
+}
+
+
+float sensorTemperatura[temperatura]; 
+float t; 
+
+
+int main()
+{
+    printf("Se considera la persona con temperatura aquella que tenga mayor o igual a 37.0");
+    printf("Se considera que la persona tiene temperatura normal aquella que tenga menor a 36.9 hasta 36.0");
+
+    return 0;
+}

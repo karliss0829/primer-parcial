@@ -1,0 +1,126 @@
+EJERCICIO #1
+
+#include <stdio.h>
+#define TAMANO_ARREGLO 5
+
+int main() 
+{
+
+int v[10];
+int i, *p;
+
+ 
+
+for (i=0; i < 10; i++) v[i] = i;
+
+ 
+
+for (i=0; i < 10; i++)
+printf ("\n%d", v[i]);
+p = v;
+
+for (i=0; i < 10; i++) 
+printf ("\n%d", *p++);
+
+for (i=0; i<10; i++)
+printf("\n %d",&v[10] );
+
+for (i=0; i<10; i++)
+printf("\n %d", &*p++);
+/* Tras cada p++ el puntero señala a la siguiente posición en v */
+
+ 
+
+/*ejercicio: imprima las direcciones de cada posición del vector. LAS DIRECCIONES SE MARCAN CON &*/
+/*¿son las mismas? AL INICIO SON LA MISMAS, PERO DESPUES CAMBIAN LOS ULTIMOS NUMEROS*/ 
+
+return 0;
+
+}
+
+
+
+EJERCICIO MAESTRA
+
+#include <stdio.h>
+#define TAMANO_ARREGLO 5
+
+int main() 
+{
+
+int v[10];
+int i, *p;
+
+ 
+
+for (i=0; i < 10; i++) v[i] = i;
+
+ 
+
+for (i=0; i < 10; i++)
+printf ("\n%d", v[i]);
+p = v;
+
+for (i=0; i < 10; i++) 
+printf ("\n%d", *p++);
+
+for (i=0; i<10; i++)
+printf("\n %d", &*p++);
+/* Tras cada p++ el puntero señala a la siguiente posición en v */
+
+ 
+
+/*ejercicio: imprima las direcciones de cada posición del vector. LAS DIRECCIONES SE MARCAN CON &*/
+/*¿son las mismas? AL INICIO SON LA MISMAS, PERO DESPUES CAMBIAN LOS ULTIMOS NUMEROS*/ 
+
+return 0;
+
+}
+
+
+EJERCICIO #2 PARAMETROS CON ARREGLOS
+
+#include <stdio.h>
+
+void main ()
+{
+char cadena[20];
+int longitud();
+
+printf ("\nDame una cadena (maximo 20): ");
+gets(cadena);
+printf ("\nLa cadena %s mide %d ", cadena, longitud(cadena)); 
+}
+
+
+int longitud(char *s) //arreglo con aputador a una cadena
+{
+int l; //l=longitud
+l = 0;
+while (*s++ != '\0') l++; //diferente de 0 para medir la lognitud de la cadena
+return l;
+} 
+
+
+EJERCICIO #3
+
+#include <stdio.h>
+
+void main()
+{
+char uno[20], dos[20]; //ARREGLOS DEL MISMO TAMAÑO
+printf ("\nDame una cadena:");
+gets(uno); //PRINTF, GUARDA CARACTERES Y CONCATENA EN UNA VARIABLE (UNO)
+copia(uno, dos);
+printf ("\nLa copia de %s\n es %s\n", uno, dos); //IMPRIME LA COPIA 
+}
+
+ 
+copia (char *s, char*p) 
+{
+    
+ while (*s) *p++ = *s++;
+ *p = '\0';
+} 
+
+

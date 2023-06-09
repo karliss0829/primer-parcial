@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define TAMANO 2 
+
+int main()
+{
+    char c; 
+    int x;
+    int arreglo [TAMANO];
+    double y; 
+    
+    printf("El tamaño en bytes de una variable char es: %d \n", sizeof(c));
+    printf("El tamaño en bits de una variable char es: %d \n", (sizeof(c))*8);
+    printf("El tamaño en nibbles de una variable char es: %d \n", (sizeof(c))*2);
+    
+    printf("El tamaño en bytes de una variable int es: %d \n", sizeof(x));
+    printf("El tamaño en bits de una variable int es: %d \n", (sizeof(x))*8);
+    printf("El tamaño en nibbles de una variable int es: %d \n", (sizeof(x))*2);
+    
+    printf("El tamaño en bytes de una variable int es: %d \n", sizeof(arreglo[TAMANO]));
+    printf("El tamaño en bits de una variable int es: %d \n", sizeof(arreglo [TAMANO])*8);
+    printf("El tamaño en nibbles de una variable int es: %d \n", sizeof(arreglo [TAMANO])*2); 
+    
+    
+
+    return 0;
+}
